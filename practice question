@@ -1,0 +1,66 @@
+//4 wap to filter all strings that start with "A" from a list of strings 
+import java.util.*;
+import java.util.stream.*;
+
+public class startwith {
+    public static void main(String[] args) {
+
+         List<String> list = Arrays.asList("Aman", "Riya", "Ankit", "Bob", "Alice", "Karan");
+        // List<String> result = list.stream() .filter(s -> s.startsWith("A")).collect(Collectors.toList());
+
+        // System.out.println(result);
+        //5 wap to filter all strings that end with "A" from a list of strings
+        List<String> result2 = list.stream() .filter(s -> s.endsWith("A")).collect(Collectors.toList());    
+        System.out.println(result2);
+
+        //6 wap to filter positive numbers from a list of integers
+        List<Integer> numbers = Arrays.asList(-5, 3, -2, 7, -1, 4);
+        List<Integer> positiveNumbers = numbers.stream() .filter(n -> n > 0).collect(Collectors.toList());
+        System.out.println(positiveNumbers);
+
+        //7 wap to filter odd numbers from a list of integers
+        List<Integer> oddNumbers = numbers.stream() .filter(n -> n % 2 != 0).collect(Collectors.toList());
+        System.out.println(oddNumbers);
+
+        //8 wap to filter all strings containing the letter "A" from a list of strings
+        List<String> result3 = list.stream() .filter(s -> s.contains("A")).collect(Collectors.toList());
+        System.out.println(result3);
+
+        //9 wap to filter all strings whose length is greater than 5 from a list of strings
+        List<String> result4 = list.stream() .filter(s -> s.length() > 5).collect(Collectors.toList());
+        System.out.println(result4);
+
+        //10 wap to filter numbers divisible by 3 from a list of integers
+        List<Integer> divisibleBy3 = numbers.stream() .filter(n -> n % 3 == 0).collect(Collectors.toList());
+        System.out.println(divisibleBy3);
+
+        //11 wap usin map() to covert a list of lowercase strings to uppercase strings
+        List<String> uppercaseList = list.stream() .map(s -> s.toUpperCase()).collect(Collectors.toList());
+        System.out.println(uppercaseList);  
+
+        //12 add 10 to each element in a list of integers using map()
+        List<Integer> add10 = numbers.stream() .map(n -> n + 10).   collect(Collectors.toList());
+        System.out.println(add10);
+
+        //13 find the length of each string in a list of strings using map()
+        List<Integer> lengths = list.stream() .map(s -> s.length()).collect(Collectors.toList());
+        System.out.println(lengths);
+
+        //14 extract the first character of each string  using map()
+        List<Character> firstCharacters = list.stream() .map(s -> s.charAt(0)).collect(Collectors.toList());
+        System.out.println(firstCharacters);
+
+        //15 from a list of integer replace all negative numbers with 0 using map()
+        List<Integer> replaceNegatives = numbers.stream() .map(n -> n < 0 ? 0 : n).collect(Collectors.toList());
+        System.out.println(replaceNegatives);
+
+        //16 given a list of integer covert each number to its square using map()
+        List<Integer> squares = numbers.stream() .map(n -> n * n).collect(Collectors .toList());
+        System.out.println(squares);
+
+        //17 given a list of integer create a new list whwere each element is doubled using map()
+        List<Integer> doubled = numbers.stream() .map(n -> n * 2).collect(Collectors.toList());
+        System.out.println(doubled);
+
+    }
+}
